@@ -1,1 +1,13 @@
-<iframe scrolling="no" frameborder="0" width="100%" height="100%" src="aHR0cHM6Ly9ieWRlc2lnbi14YXQuZ2l0aHViLmlvL1BsYXllcmUvTnIxLmh0bWw=">Your browser does not support iframes!</iframe>
+<iframe id="playerFrame"
+        scrolling="no"
+        frameborder="0"
+        width="100%"
+        height="100%">
+</iframe>
+
+<script>
+    var encoded = "aHR0cHM6Ly9ieWRlc2lnbi14YXQuZ2l0aHViLmlvL1BsYXllcmUvTnIxLmh0bWw=";
+    var decoded = atob(encoded);
+
+    document.getElementById("playerFrame").src = decoded;
+</script>
