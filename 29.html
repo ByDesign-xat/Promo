@@ -1,0 +1,33 @@
+<iframe id="playerFrame"
+        scrolling="no"
+        frameborder="0"
+        width="100%"
+        height="100%">
+</iframe>
+
+<script>
+    var encoded = "aHR0cHM6Ly9ieWRlc2lnbi14YXQuZ2l0aHViLmlvL1BsYXllcmUvTnIyOS5odG1s";
+    var decoded = atob(encoded);
+
+    document.getElementById("playerFrame").src = decoded;
+	
+	
+// --- PROTECT SCRIPT ---
+
+
+document.addEventListener("contextmenu", e => e.preventDefault());
+
+document.onkeydown = function(e) {
+
+if(e.keyCode == 123) return false; // F12
+
+if(e.ctrlKey && e.shiftKey && e.keyCode == 73) return false; // CTRL+SHIFT+I
+
+if(e.ctrlKey && e.shiftKey && e.keyCode == 74) return false; // CTRL+SHIFT+J
+
+if(e.ctrlKey && e.keyCode == 85) return false; // CTRL+U
+
+};	
+	
+	
+</script>
